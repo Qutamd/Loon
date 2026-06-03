@@ -1,0 +1,4 @@
+[Rule]
+# 只要是小翼管家的 UDP 流量，强制走直连，不触发全局 REJECT
+AND, ((USER-AGENT, 小翼管家*), (PROTOCOL, UDP)), DIRECT
+AND, ((USER-AGENT, E-Home*), (PROTOCOL, UDP)), DIRECT
